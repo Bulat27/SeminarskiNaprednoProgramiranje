@@ -15,7 +15,7 @@ public class UtilApplicationProperties {
     private final Properties properties;
     private static UtilApplicationProperties instance;
 
-    private static final String APPLICATION_PROPERTIES_FILE_PATH = "Server/src/main/resources/application.properties";
+    private static final String APPLICATION_PROPERTIES_FILE_PATH = "application.properties";
     private static final String APPLICATION_PROPERTIES_DB_URL = "db.url";
     private static final String APPLICATION_PROPERTIES_DB_USERNAME = "db.username";
     private static final String APPLICATION_PROPERTIES_DB_PASSWORD = "db.password";
@@ -23,7 +23,8 @@ public class UtilApplicationProperties {
 
     private UtilApplicationProperties() throws IOException {
         properties = new Properties();
-        properties.load(new FileInputStream(new File(APPLICATION_PROPERTIES_FILE_PATH)));
+//        properties.load(new FileInputStream(new File(APPLICATION_PROPERTIES_FILE_PATH)));
+        properties.load(getClass().getClassLoader().getResourceAsStream("application.properties"));
     }
 
     public static UtilApplicationProperties getInstance() throws IOException {
