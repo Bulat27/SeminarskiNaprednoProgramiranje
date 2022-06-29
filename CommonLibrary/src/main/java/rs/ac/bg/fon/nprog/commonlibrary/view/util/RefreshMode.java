@@ -1,4 +1,4 @@
-package rs.ac.bg.fon.nprog.commonlibrary.util;
+package rs.ac.bg.fon.nprog.commonlibrary.view.util;
 
 /**
  *
