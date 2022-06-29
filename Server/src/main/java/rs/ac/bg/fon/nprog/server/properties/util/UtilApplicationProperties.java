@@ -15,7 +15,7 @@ public class UtilApplicationProperties {
     private final Properties properties;
     private static UtilApplicationProperties instance;
 
-    private static final String APPLICATION_PROPERTIES_FILE_PATH = "Server/config/application.properties";
+    private static final String APPLICATION_PROPERTIES_FILE_PATH = "Server/src/main/resources/application.properties";
     private static final String APPLICATION_PROPERTIES_DB_URL = "db.url";
     private static final String APPLICATION_PROPERTIES_DB_USERNAME = "db.username";
     private static final String APPLICATION_PROPERTIES_DB_PASSWORD = "db.password";
