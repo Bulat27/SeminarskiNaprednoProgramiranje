@@ -1,11 +1,11 @@
 package rs.ac.bg.fon.nprog.commonlibrary.communication;
 
-import communication.util.ResponseType;
+
+import rs.ac.bg.fon.nprog.commonlibrary.communication.util.ResponseType;
 
 import java.io.Serializable;
 
 /**
- *
  * @author Dragon
  */
 public class Response implements Serializable {

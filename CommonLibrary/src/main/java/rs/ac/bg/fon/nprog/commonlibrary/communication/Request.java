@@ -1,6 +1,5 @@
 package rs.ac.bg.fon.nprog.commonlibrary.communication;
-
-import communication.util.Operation;
+import rs.ac.bg.fon.nprog.commonlibrary.communication.util.Operation;
 
 import java.io.Serializable;
 
