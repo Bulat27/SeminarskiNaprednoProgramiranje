@@ -1,9 +1,9 @@
 package rs.ac.bg.fon.nprog.commonlibrary.validation;
 
-import domain.Repair;
-import domain.RepairItem;
-import domain.validation.RepairItemValidator;
-import domain.validation.RepairValidator;
+import rs.ac.bg.fon.nprog.commonlibrary.domain.Repair;
+import rs.ac.bg.fon.nprog.commonlibrary.domain.RepairItem;
+import rs.ac.bg.fon.nprog.commonlibrary.domain.validation.RepairItemValidator;
+import rs.ac.bg.fon.nprog.commonlibrary.domain.validation.RepairValidator;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

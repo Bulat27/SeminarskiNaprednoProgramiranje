@@ -1,7 +1,6 @@
 package rs.ac.bg.fon.nprog.commonlibrary.domain;
 
-import domain.util.EmployeeRole;
-
+import rs.ac.bg.fon.nprog.commonlibrary.domain.util.EmployeeRole;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.PreparedStatement;

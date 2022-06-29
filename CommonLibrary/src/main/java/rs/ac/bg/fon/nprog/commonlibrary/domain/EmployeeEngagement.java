@@ -1,13 +1,12 @@
 package rs.ac.bg.fon.nprog.commonlibrary.domain;
 
-import domain.util.EmployeeRole;
+import rs.ac.bg.fon.nprog.commonlibrary.domain.util.EmployeeRole;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- *
  * @author Dragon
  */
 public class EmployeeEngagement implements GeneralDObject {

@@ -1,8 +1,9 @@
 package rs.ac.bg.fon.nprog.commonlibrary.domain.validation;
 
-import domain.Repair;
-import domain.RepairItem;
-import validation.ValidationException;
+
+import rs.ac.bg.fon.nprog.commonlibrary.domain.Repair;
+import rs.ac.bg.fon.nprog.commonlibrary.domain.RepairItem;
+import rs.ac.bg.fon.nprog.commonlibrary.validation.ValidationException;
 
 import java.math.BigDecimal;
 
