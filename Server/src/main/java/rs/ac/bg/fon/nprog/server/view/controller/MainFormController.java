@@ -2,6 +2,7 @@ package rs.ac.bg.fon.nprog.server.view.controller;
 
 import rs.ac.bg.fon.nprog.commonlibrary.domain.Employee;
 import rs.ac.bg.fon.nprog.commonlibrary.view.util.RefreshMode;
+import rs.ac.bg.fon.nprog.server.controller.Controller;
 import rs.ac.bg.fon.nprog.server.view.coordinator.ViewCoordinator;
 import rs.ac.bg.fon.nprog.server.view.form.MainForm;
 import rs.ac.bg.fon.nprog.server.view.form.model.TableModelEmployee;
