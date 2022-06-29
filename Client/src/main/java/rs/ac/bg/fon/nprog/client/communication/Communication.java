@@ -1,5 +1,6 @@
 package rs.ac.bg.fon.nprog.client.communication;
 
+import rs.ac.bg.fon.nprog.client.view.coordinator.Coordinator;
 import rs.ac.bg.fon.nprog.commonlibrary.communication.Receiver;
 import rs.ac.bg.fon.nprog.commonlibrary.communication.Request;
 import rs.ac.bg.fon.nprog.commonlibrary.communication.Response;
