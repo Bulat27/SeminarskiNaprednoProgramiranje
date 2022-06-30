@@ -7,43 +7,99 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
+ * Predstavlja angazovanje zaposlenog.
+ * Angazovanje zaposlenog spaja odredjenog zaposlenog sa odredjenom stavkom servisa (popravke).
+ * Sadrzi atribute zaposleni, stavkaServisa i trajanje.
+ *
  * @author Dragon
+ * @version 1.0
  */
 public class EmployeeEngagement implements GeneralDObject {
 
+    /**
+     * Zaposleni na kojeg se angazovanje odnosi, podrazumevanja vrednost je null.
+     */
     private Employee employee;
+
+    /**
+     * Stavka servisa (popravke) na koju se angazovanje odnosi, podrazumevana vrednost je null.
+     */
     private RepairItem repairItem;
+
+    /**
+     * Trajanje angazovanja radnika koje se koristi za izracunavanje cene stavke servisa, podrazumevana vrednost je 0.
+     */
     private int duration;
 
+    /**
+     * Postavlja atribute zaposleni, stavkaServisa i trajanje na njihove podrazumevane vrednosti.
+     */
     public EmployeeEngagement() {
     }
 
+    /**
+     * Postavlja atribute zaposleni, stavkaServisa i trajanje na unete vrednosti.
+     *
+     * @param employee   nova vrednost atributa zaposleni
+     * @param repairItem nova vrednost atributa stavkaServisa
+     * @param duration   nova vrednost atributa trajanje
+     */
     public EmployeeEngagement(Employee employee, RepairItem repairItem, int duration) {
         this.employee = employee;
         this.repairItem = repairItem;
         this.duration = duration;
     }
 
+    /**
+     * Vraca vrednost atributa zaposleni.
+     *
+     * @return zaposleni kao Employee
+     */
     public Employee getEmployee() {
         return employee;
     }
 
+    /**
+     * Postavlja novu vrednost atributa zaposleni.
+     *
+     * @param employee nova vrednost atributa zaposleni
+     */
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
+    /**
+     * Vraca vrednost atributa stavkaServisa.
+     *
+     * @return stavka servisa kao RepairItem
+     */
     public RepairItem getRepairItem() {
         return repairItem;
     }
 
+    /**
+     * Postavlja novu vrednost atributa stavkaServisa.
+     *
+     * @param repairItem nova vrednost atributa stavkaServisa
+     */
     public void setRepairItem(RepairItem repairItem) {
         this.repairItem = repairItem;
     }
 
+    /**
+     * Vraca vrednost atributa trajanje.
+     *
+     * @return trajanje angazovanja kao int.
+     */
     public int getDuration() {
         return duration;
     }
 
+    /**
+     * Postavlja novu vrednost atributa trajanje.
+     *
+     * @param duration nova vrednost atributa trajanje
+     */
     public void setDuration(int duration) {
         this.duration = duration;
     }
