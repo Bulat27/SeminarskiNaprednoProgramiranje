@@ -274,7 +274,7 @@ public class Employee implements GeneralDObject {
     /**
      * Vraca ime i prezime zaposlenog kao jedan String.
      *
-     * @return String koji se sastoji od imena i prezimena zaposlenog.
+     * @return String koji se sastoji od imena i prezimena zaposlenog
      */
     @Override
     public String toString() {

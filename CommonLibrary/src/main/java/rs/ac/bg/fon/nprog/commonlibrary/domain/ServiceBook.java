@@ -8,22 +8,69 @@ import java.time.LocalDate;
 import java.util.List;
 
 /**
+ * Predstavlja servisnu knjizicu.
+ * Servisna knjizica se sastoji od podataka o klijentu i liste servisa (popravki).
+ * Sadrzi atribute idServisneKnjizice, imeKlijenta, prezimeKlijenta, opisVozila, datumOtvaranja, aktivna i servisi (popravke).
  *
  * @author Dragon
+ * @version 1.0
  */
 public class ServiceBook implements GeneralDObject {
 
+    /**
+     * Identifikacioni broj servisne knjizice koji predstavlja primarni kljuc u bazi podataka, podrazumevana vrednost
+     * je null.
+     */
     private Long serviceBookID;
+
+    /**
+     * Ime klijenta za kog je otvorena servisna knjizica, podrazumevana vrednost je null.
+     */
     private String clientFirstName;
+
+    /**
+     * Prezime klijenta za kog je otvorena servisna knjizica, podrazumevana vrednost je null.
+     */
     private String clientLastName;
+
+    /**
+     * Opis vozila ciji se servisi prate u okviru servisne knjizice, podrazumevana vrednost je null.
+     */
     private String vehicleDescription;
+
+    /**
+     * Datum otvaranja servisne knjizice, podrazumevana vrednost je null.
+     */
     private LocalDate initialDate;
+
+    /**
+     * Binarna promenljiva koja ukazuje na to da li je servisna knjizica jos uvek aktivna, odnosno da li se dato vozilo
+     * jos uvek odrzava u servisu. Podrazumevana vrednost je false.
+     */
     private boolean active;
+
+    /**
+     * Servisi zabelezeni servisnoj knjizici, podrazumevana vrednost je prazna lista.
+     */
     private List<Repair> repairs;
 
+    /**
+     * Postavlja atribute na njihove podrazumevane vrednosti.
+     */
     public ServiceBook() {
     }
 
+    /**
+     * Postavlja atribute idServisneKnjizice, imeKlijenta, prezimeKlijenta, opisVozila, datumOtvaranja, aktivna i servisi
+     * na unete vrednosti
+     *
+     * @param serviceBookID nova vrednost atributa idServisneKnjizice
+     * @param clientFirstName nova vrednost atributa imeKlijenta
+     * @param clientLastName nova vrednost atributa prezimeKlijenta
+     * @param vehicleDescription nova vrednost atributa opisVozila
+     * @param initialDate nova vrednost atributa datumOtvaranja
+     * @param active nova vrednost atributa aktivna
+     */
     public ServiceBook(Long serviceBookID, String clientFirstName, String clientLastName, String vehicleDescription, LocalDate initialDate, boolean active) {
         this.serviceBookID = serviceBookID;
         this.clientFirstName = clientFirstName;
@@ -33,6 +80,16 @@ public class ServiceBook implements GeneralDObject {
         this.active = active;
     }
 
+    /**
+     * Postavlja atribute imeKlijenta, prezimeKlijenta, opisVozila, datumOtvaranja, aktivna i servisi
+     * na unete vrednosti. Atribut idServisneKnjizice postavlja na podrazumevanu vrednost.
+     *
+     * @param clientFirstName nova vrednost atributa imeKlijenta
+     * @param clientLastName nova vrednost atributa prezimeKlijenta
+     * @param vehicleDescription nova vrednost atributa opisVozila
+     * @param initialDate nova vrednost atributa datumOtvaranja
+     * @param active nova vrednost atributa aktivna
+     */
     public ServiceBook(String clientFirstName, String clientLastName, String vehicleDescription, LocalDate initialDate, boolean active) {
         this.clientFirstName = clientFirstName;
         this.clientLastName = clientLastName;
@@ -41,58 +98,127 @@ public class ServiceBook implements GeneralDObject {
         this.active = active;
     }
 
+    /**
+     * Vraca vrednost atributa idServisneKnjizice.
+     *
+     * @return id servisne knjizice kao Long
+     */
     public Long getServiceBookID() {
         return serviceBookID;
     }
 
+    /**
+     * Postavlja novu vrednost atributa idServisneKnjizice.
+     *
+     * @param serviceBookID nova vrednost atributa idServisneKnjizice
+     */
     public void setServiceBookID(Long serviceBookID) {
         this.serviceBookID = serviceBookID;
     }
 
+    /**
+     * Vraca vrednost atributa imeKlijenta.
+     *
+     * @return ime klijenta kao String
+     */
     public String getClientFirstName() {
         return clientFirstName;
     }
 
+    /**
+     * Postavlja novu vrednost atributa imeKlijenta.
+     *
+     * @param clientFirstName nova vrednost atributa imeKlijenta
+     */
     public void setClientFirstName(String clientFirstName) {
         this.clientFirstName = clientFirstName;
     }
 
+    /**
+     * Vraca vrednost atributa prezimeKlijenta.
+     *
+     * @return prezime klijenta kao String
+     */
     public String getClientLastName() {
         return clientLastName;
     }
 
+    /**
+     * Postavlja novu vrednost atributa prezimeKlijenta.
+     *
+     * @param clientLastName nova vrednost atributa prezimeKlijenta
+     */
     public void setClientLastName(String clientLastName) {
         this.clientLastName = clientLastName;
     }
 
+    /**
+     * Vraca vrednost atributa opisVozila.
+     *
+     * @return opis vozila kao String
+     */
     public String getVehicleDescription() {
         return vehicleDescription;
     }
-
+    /**
+     * Postavlja novu vrednost atributa opisVozila.
+     *
+     * @param vehicleDescription nova vrednost atributa opisVozila
+     */
     public void setVehicleDescription(String vehicleDescription) {
         this.vehicleDescription = vehicleDescription;
     }
 
+    /**
+     * Vraca vrednost atributa datumOtvaranja.
+     *
+     * @return datum otvaranja servisne knjizice kao LocalDate
+     */
     public LocalDate getInitialDate() {
         return initialDate;
     }
 
+    /**
+     * Postavlja novu vrednost atributa datumOtvaranja.
+     *
+     * @param initialDate nova vrednost atributa datumOtvaranja
+     */
     public void setInitialDate(LocalDate initialDate) {
         this.initialDate = initialDate;
     }
 
+    /**
+     * Vraca vrednost atributa aktivna.
+     *
+     * @return status aktivnosti servisne knjizice kao boolean
+     */
     public boolean isActive() {
         return active;
     }
 
+    /**
+     * Postavlja novu vrednost atributa aktivna.
+     *
+     * @param active nova vrednost atributa aktivna
+     */
     public void setActive(boolean active) {
         this.active = active;
     }
 
+    /**
+     * Vraca vrednost atributa servisi.
+     *
+     * @return servisi u okviru servise knjizice kao lista objekata klase Repair
+     */
     public List<Repair> getRepairs() {
         return repairs;
     }
 
+    /**
+     * Postavlja novu vrednost atributa servisi.
+     *
+     * @param repairs nova vrednost atributa servisi
+     */
     public void setRepairs(List<Repair> repairs) {
         this.repairs = repairs;
     }
@@ -146,11 +272,21 @@ public class ServiceBook implements GeneralDObject {
         return "client_first_name = ?, client_last_name = ?, vehicle_description = ?, initial_date = ?, active = ?";
     }
 
+    /**
+     * Vraca vrednosti atributa imeKlijenta i prezimeKlijenta kao jedan String.
+     *
+     * @return String koji se sastoji od imena i prezimena klijenta
+     */
     @Override
     public String toString() {
         return clientFirstName + " " + clientLastName;
     }
 
+    /**
+     * Vraca opste podatke o servisnoj knjizici koji se sastoje od imena klijenta, prezimena klijenta i opisa vozila.
+     *
+     * @return String koji se sastoji od imena klijenta, prezimena klijenta i opisa vozila.
+     */
     public String getGeneralData() {
         return clientFirstName + " " + clientLastName + ", " + vehicleDescription;
     }

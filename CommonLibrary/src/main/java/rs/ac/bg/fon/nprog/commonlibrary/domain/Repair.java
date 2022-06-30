@@ -30,29 +30,29 @@ public class Repair implements GeneralDObject {
     private String name;
 
     /**
-     * Datum pocetka servisa, podrazumevana vrednost je null.
+     * Datum pocetka servisa koji predstavlja najraniji datum pocetka svih stavki servisa, podrazumevana vrednost je null.
      */
     private LocalDate startDate;
 
     /**
-     * Ukupna dobit servisa, pocetna vrednost je BigDecimal.ZERO. Dobija se kao suma cene svih usluga i dodatne dobiti
+     * Ukupna dobit servisa, podrazumevana vrednost je BigDecimal.ZERO. Dobija se kao suma cene svih usluga i dodatne dobiti
      * u okviru stavki servisa.
      */
     private BigDecimal totalRevenue = BigDecimal.ZERO;
 
     /**
-     * Ukupni troskovi servisa, pocetna vrednost je BigDecimal.ZERO. Dobija se kao suma svih troskova radnika,
+     * Ukupni troskovi servisa, podrazumevana vrednost je BigDecimal.ZERO. Dobija se kao suma svih troskova radnika,
      * dodatnih troskova i troskova materijala u okviru stavki servisa.
      */
     private BigDecimal totalExpense = BigDecimal.ZERO;
 
     /**
-     * Servisna knjizica za koju se servis vezuje, pocetna vrednost je null.
+     * Servisna knjizica za koju se servis vezuje, podrazumevana vrednost je null.
      */
     private ServiceBook serviceBook;
 
     /**
-     * Lista stavki servisa koje priparadaju datom servisu, pocetna vrednost je prazna lista.
+     * Lista stavki servisa koje priparadaju datom servisu, podrazumevana vrednost je prazna lista.
      */
     private List<RepairItem> repairItems = new ArrayList<>();
 
