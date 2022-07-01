@@ -27,7 +27,7 @@ public class EmployeeEngagement implements GeneralDObject {
     private RepairItem repairItem;
 
     /**
-     * Trajanje angazovanja radnika koje se koristi za izracunavanje cene stavke servisa, podrazumevana vrednost je 0.
+     * Trajanje (u satima) angazovanja radnika koje se koristi za izracunavanje cene stavke servisa, podrazumevana vrednost je 0.
      */
     private int duration;
 
