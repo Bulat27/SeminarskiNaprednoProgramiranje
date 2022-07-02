@@ -26,6 +26,7 @@ import static org.mockito.Mockito.when;
 class EmployeeTest {
 
     private Employee e;
+
     @Mock
     private ResultSet rs;
     @Mock

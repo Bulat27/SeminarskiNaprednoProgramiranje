@@ -63,7 +63,7 @@ public class Repair implements GeneralDObject {
     }
 
     /**
-     * Postavlja atribute idServisa, naziv, datumPocetka, ukupnaDobit, ukupniTroskovi iservisnaKnjizica na unete vrednosti.
+     * Postavlja atribute idServisa, naziv, datumPocetka, ukupnaDobit, ukupniTroskovi i servisnaKnjizica na unete vrednosti.
      * Atribut stavkeServisa postavlja na podrazumevanu vrednost.
      *
      * @param repairID nova vrednost atributa idServisa
