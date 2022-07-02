@@ -50,7 +50,7 @@ public class ServiceBook implements GeneralDObject {
     private boolean active;
 
     /**
-     * Servisi zabelezeni servisnoj knjizici, podrazumevana vrednost je prazna lista.
+     * Servisi zabelezeni servisnoj knjizici, podrazumevana vrednost je null.
      */
     private List<Repair> repairs;
 
@@ -61,8 +61,9 @@ public class ServiceBook implements GeneralDObject {
     }
 
     /**
-     * Postavlja atribute idServisneKnjizice, imeKlijenta, prezimeKlijenta, opisVozila, datumOtvaranja, aktivna i servisi
-     * na unete vrednosti
+     * Postavlja atribute idServisneKnjizice, imeKlijenta, prezimeKlijenta, opisVozila, datumOtvaranja i aktivna
+     * na unete vrednosti.
+     * Atribut servisi postavlja na podrazumevanu vrednost.
      *
      * @param serviceBookID nova vrednost atributa idServisneKnjizice
      * @param clientFirstName nova vrednost atributa imeKlijenta
@@ -81,8 +82,9 @@ public class ServiceBook implements GeneralDObject {
     }
 
     /**
-     * Postavlja atribute imeKlijenta, prezimeKlijenta, opisVozila, datumOtvaranja, aktivna i servisi
-     * na unete vrednosti. Atribut idServisneKnjizice postavlja na podrazumevanu vrednost.
+     * Postavlja atribute imeKlijenta, prezimeKlijenta, opisVozila, datumOtvaranja i aktivna
+     * na unete vrednosti.
+     * Atribute idServisneKnjizice i servisi postavlja na podrazumevane vrednosti.
      *
      * @param clientFirstName nova vrednost atributa imeKlijenta
      * @param clientLastName nova vrednost atributa prezimeKlijenta
