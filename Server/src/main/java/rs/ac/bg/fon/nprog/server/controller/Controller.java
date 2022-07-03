@@ -92,7 +92,7 @@ public class Controller {
      * @throws Exception ukoliko prijava korisnika nije uspesna
      */
     public Employee login(Employee requestEmployee) throws Exception {
-        LoginSO loginSO = new LoginSO();
+        LoginSO loginSO = createLoginSO();
         loginSO.execute(requestEmployee);
 
         return (Employee) loginSO.getResult();
@@ -106,7 +106,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greske prilikom cuvanja nove usluge
      */
     public void addService(Service service) throws Exception {
-        AddServiceSO addServiceSO = new AddServiceSO();
+        AddServiceSO addServiceSO = createAddServiceSO();
         addServiceSO.execute(service);
     }
 
@@ -118,7 +118,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom ucitavanja usluga
      */
     public List<Service> getAllServices() throws Exception {
-        GetAllServicesSO getAllServicesSO = new GetAllServicesSO();
+        GetAllServicesSO getAllServicesSO = createGetAllServicesSO();
         getAllServicesSO.execute(null);
 
         return (List<Service>) getAllServicesSO.getResult();
@@ -132,7 +132,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom brisanja usluge
      */
     public void deleteService(Service service) throws Exception {
-        DeleteServiceSO deleteServiceSO = new DeleteServiceSO();
+        DeleteServiceSO deleteServiceSO = createDeleteServiceSO();
         deleteServiceSO.execute(service);
     }
 
@@ -146,7 +146,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom filtriranja ili ucitavanja usluga
      */
     public List<Service> getServicesByCondition(Service service) throws Exception {
-        GetServicesByConditionSO getServicesByConditionSO = new GetServicesByConditionSO();
+        GetServicesByConditionSO getServicesByConditionSO = createGetServicesByConditionSO();
         getServicesByConditionSO.execute(service);
 
         return (List<Service>) getServicesByConditionSO.getResult();
@@ -160,7 +160,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom cuvanja zaposlenog
      */
     public void addEmployee(Employee employee) throws Exception {
-        AddEmployeeSO addEmployeeSO = new AddEmployeeSO();
+        AddEmployeeSO addEmployeeSO = createAddEmployeeSO();
         addEmployeeSO.execute(employee);
     }
 
@@ -172,7 +172,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom ucitavanja zaposlenih
      */
     public List<Employee> getAllEmployees() throws Exception {
-        GetAllEmployeesSO getAllEmployeesSO = new GetAllEmployeesSO();
+        GetAllEmployeesSO getAllEmployeesSO = createGetAllEmployeesSO();
         getAllEmployeesSO.execute(null);
 
         return (List<Employee>) getAllEmployeesSO.getResult();
@@ -188,7 +188,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom filtriranja ili ucitavanja zaposlenih
      */
     public List<Employee> getEmployeesByCondition(Employee employee) throws Exception {
-        GetEmployeesByConditionSO getEmployeesByConditionSO = new GetEmployeesByConditionSO();
+        GetEmployeesByConditionSO getEmployeesByConditionSO = createGetEmployeesByConditionSO();
         getEmployeesByConditionSO.execute(employee);
 
         return (List<Employee>) getEmployeesByConditionSO.getResult();
@@ -202,7 +202,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom azuriranja vrednosti zaposlenog
      */
     public void editEmployee(Employee employee) throws Exception {
-        EditEmployeeSO editEmployeeSO = new EditEmployeeSO();
+        EditEmployeeSO editEmployeeSO = createEditEmployeeSO();
         editEmployeeSO.execute(employee);
     }
 
@@ -214,7 +214,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom brisanja zaposlenog iz baze podataka
      */
     public void deleteEmployee(Employee employee) throws Exception {
-        DeleteEmployeeSO deleteEmployeeSO = new DeleteEmployeeSO();
+        DeleteEmployeeSO deleteEmployeeSO = createDeleteEmployeeSO();
         deleteEmployeeSO.execute(employee);
     }
 
@@ -227,7 +227,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom cuvanja servisne knjizice
      */
     public void addServiceBook(ServiceBook serviceBook) throws Exception {
-        AddServiceBookSO addServiceBookSO = new AddServiceBookSO();
+        AddServiceBookSO addServiceBookSO = createAddServiceBookSO();
         addServiceBookSO.execute(serviceBook);
     }
 
@@ -239,7 +239,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom ucitavanja servisnih knjizica
      */
     public List<ServiceBook> getAllServiceBooks() throws Exception {
-        GetAllServiceBooksSO getAllServiceBooksSO = new GetAllServiceBooksSO();
+        GetAllServiceBooksSO getAllServiceBooksSO = createGetAllServiceBooksSO();
         getAllServiceBooksSO.execute(null);
 
         return (List<ServiceBook>) getAllServiceBooksSO.getResult();
@@ -255,7 +255,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom filtriranja ili ucitavanja servisnih knjizica
      */
     public List<ServiceBook> getServiceBooksByCondition(ServiceBook serviceBook) throws Exception {
-        GetServiceBooksByConditionSO getServiceBooksByConditionSO = new GetServiceBooksByConditionSO();
+        GetServiceBooksByConditionSO getServiceBooksByConditionSO = createGetServiceBooksByConditionSO();
         getServiceBooksByConditionSO.execute(serviceBook);
 
         return (List<ServiceBook>) getServiceBooksByConditionSO.getResult();
@@ -269,7 +269,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom brisanja servisne knjizice iz baze podataka
      */
     public void deleteServiceBook(ServiceBook serviceBook) throws Exception {
-        DeleteServiceBookSO deleteServiceBookSO = new DeleteServiceBookSO();
+        DeleteServiceBookSO deleteServiceBookSO = createDeleteServiceBookSO();
         deleteServiceBookSO.execute(serviceBook);
     }
 
@@ -281,7 +281,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom azuriranja vrednosti servisne knjizice
      */
     public void editServiceBook(ServiceBook serviceBook) throws Exception {
-        EditServiceBookSO editServiceBookSO = new EditServiceBookSO();
+        EditServiceBookSO editServiceBookSO = createEditServiceBookSO();
         editServiceBookSO.execute(serviceBook);
     }
 
@@ -295,7 +295,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom filtriranja ili ucitavanja servisa
      */
     public List<Repair> getRepairsByFKCondition(Repair repair) throws Exception {
-        GetRepairsByFKConditionSO getRepairsByFKConditionSO = new GetRepairsByFKConditionSO();
+        GetRepairsByFKConditionSO getRepairsByFKConditionSO = createGetRepairsByFKConditionSO();
         getRepairsByFKConditionSO.execute(repair);
 
         return (List<Repair>) getRepairsByFKConditionSO.getResult();
@@ -311,7 +311,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom filtriranja ili ucitavanja stavki servisa
      */
     public List<RepairItem> getRepairItemsByFKCondition(RepairItem repairItem) throws Exception {
-        GetRepairItemsByFKConditionSO getRepairItemsByFKConditionSO = new GetRepairItemsByFKConditionSO();
+        GetRepairItemsByFKConditionSO getRepairItemsByFKConditionSO = createGetRepairItemsByFKConditionSO();
         getRepairItemsByFKConditionSO.execute(repairItem);
 
         return (List<RepairItem>) getRepairItemsByFKConditionSO.getResult();
@@ -326,7 +326,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom cuvanja servisa
      */
     public Repair addRepair(Repair repair) throws Exception {
-        AddRepairSO addRepairSO = new AddRepairSO();
+        AddRepairSO addRepairSO = createAddRepairSO();
         addRepairSO.execute(repair);
 
         return (Repair) addRepairSO.getResult();
@@ -340,7 +340,7 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom brisanja servisa iz baze podataka
      */
     public void deleteRepair(Repair repair) throws Exception {
-        DeleteRepairSO deleteRepairSO = new DeleteRepairSO();
+        DeleteRepairSO deleteRepairSO = createDeleteRepairSO();
         deleteRepairSO.execute(repair);
     }
 
@@ -352,7 +352,68 @@ public class Controller {
      * @throws Exception ukoliko nastane greska prilikom azuriranja vrednosti servisa
      */
     public void editRepair(Repair repair) throws Exception {
-        EditRepairSO editRepairSO = new EditRepairSO();
+        EditRepairSO editRepairSO = createEditRepairSO();
         editRepairSO.execute(repair);
+    }
+
+    protected LoginSO createLoginSO(){
+        return new LoginSO();
+    }
+    protected AddServiceSO createAddServiceSO(){
+        return new AddServiceSO();
+    }
+    protected GetAllServicesSO createGetAllServicesSO() {
+        return new GetAllServicesSO();
+    }
+    protected DeleteServiceSO createDeleteServiceSO(){
+        return new DeleteServiceSO();
+    }
+    protected GetServicesByConditionSO createGetServicesByConditionSO(){
+        return new GetServicesByConditionSO();
+    }
+    protected AddEmployeeSO createAddEmployeeSO(){
+        return new AddEmployeeSO();
+    }
+    protected GetAllEmployeesSO createGetAllEmployeesSO(){
+        return new GetAllEmployeesSO();
+    }
+    protected GetEmployeesByConditionSO createGetEmployeesByConditionSO(){
+        return new GetEmployeesByConditionSO();
+    }
+    protected EditEmployeeSO createEditEmployeeSO(){
+        return new EditEmployeeSO();
+    }
+    protected DeleteEmployeeSO createDeleteEmployeeSO(){
+        return new DeleteEmployeeSO();
+    }
+    protected AddServiceBookSO createAddServiceBookSO(){
+        return new AddServiceBookSO();
+    }
+    protected GetAllServiceBooksSO createGetAllServiceBooksSO(){
+        return new GetAllServiceBooksSO();
+    }
+    protected GetServiceBooksByConditionSO createGetServiceBooksByConditionSO(){
+        return new GetServiceBooksByConditionSO();
+    }
+    protected DeleteServiceBookSO createDeleteServiceBookSO(){
+        return new DeleteServiceBookSO();
+    }
+    protected EditServiceBookSO createEditServiceBookSO(){
+        return new EditServiceBookSO();
+    }
+    protected GetRepairsByFKConditionSO createGetRepairsByFKConditionSO(){
+        return new GetRepairsByFKConditionSO();
+    }
+    protected GetRepairItemsByFKConditionSO createGetRepairItemsByFKConditionSO(){
+        return new GetRepairItemsByFKConditionSO();
+    }
+    protected AddRepairSO createAddRepairSO(){
+        return new AddRepairSO();
+    }
+    protected DeleteRepairSO createDeleteRepairSO(){
+        return new DeleteRepairSO();
+    }
+    protected EditRepairSO createEditRepairSO(){
+        return new EditRepairSO();
     }
 }

@@ -50,7 +50,7 @@ public class ServiceBook implements GeneralDObject {
     private boolean active;
 
     /**
-     * Servisi zabelezeni servisnoj knjizici, podrazumevana vrednost je null.
+     * Servisi zabelezeni u servisnoj knjizici, podrazumevana vrednost je null.
      */
     private List<Repair> repairs;
 
