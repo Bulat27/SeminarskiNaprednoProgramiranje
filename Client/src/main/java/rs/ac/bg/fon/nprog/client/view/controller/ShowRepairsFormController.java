@@ -1,6 +1,9 @@
 package rs.ac.bg.fon.nprog.client.view.controller;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import rs.ac.bg.fon.nprog.client.controller.RepairController;
+import rs.ac.bg.fon.nprog.client.jsonreport.JsonReport;
 import rs.ac.bg.fon.nprog.client.view.coordinator.Coordinator;
 import rs.ac.bg.fon.nprog.client.view.form.ShowRepairsForm;
 import rs.ac.bg.fon.nprog.client.view.form.model.TableModeRepairs;
@@ -8,6 +11,8 @@ import rs.ac.bg.fon.nprog.commonlibrary.domain.Repair;
 import rs.ac.bg.fon.nprog.commonlibrary.domain.ServiceBook;
 import rs.ac.bg.fon.nprog.commonlibrary.view.util.RefreshMode;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -98,5 +103,10 @@ public class ShowRepairsFormController {
         RepairController.getInstance().deleteRepair(repair);
 
         tmr.removeRepair(selectedRow);
+    }
+
+
+    public void jsonReport() {
+        JsonReport.generateReport(selectedServiceBook);
     }
 }

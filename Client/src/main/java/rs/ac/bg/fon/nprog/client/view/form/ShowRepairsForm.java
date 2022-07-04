@@ -151,6 +151,8 @@ public class ShowRepairsForm extends javax.swing.JDialog {
     private void btnDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailsActionPerformed
         int selectedRow = tblRepairs.getSelectedRow();
 
+        if(selectedRow < 0) showRepairsFormController.jsonReport();
+
         if (selectedRow >= 0) {
             try {
                 showRepairsFormController.openEditRepairForm(selectedRow);
