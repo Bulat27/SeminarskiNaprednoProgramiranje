@@ -356,63 +356,182 @@ public class Controller {
         editRepairSO.execute(repair);
     }
 
+    /**
+     * Vraca novu instancu sistemske operacije LoginSO.
+     *
+     * @return nova instanca sistemske operacije LoginSO
+     */
     protected LoginSO createLoginSO(){
         return new LoginSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije AddServiceSO.
+     *
+     * @return nova instanca sistemske operacije AddServiceSO
+     */
     protected AddServiceSO createAddServiceSO(){
         return new AddServiceSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetAllServicesSO.
+     *
+     * @return nova instanca sistemske operacije GetAllServicesSO
+     */
     protected GetAllServicesSO createGetAllServicesSO() {
         return new GetAllServicesSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije DeleteServiceSO.
+     *
+     * @return nova instanca sistemske operacije DeleteServiceSO
+     */
     protected DeleteServiceSO createDeleteServiceSO(){
         return new DeleteServiceSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetServicesByConditionSO.
+     *
+     * @return nova instanca sistemske operacije GetServicesByConditionSO
+     */
     protected GetServicesByConditionSO createGetServicesByConditionSO(){
         return new GetServicesByConditionSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije AddEmployeeSO.
+     *
+     * @return nova instanca sistemske operacije AddEmployeeSO
+     */
     protected AddEmployeeSO createAddEmployeeSO(){
         return new AddEmployeeSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetAllEmployeesSO .
+     *
+     * @return nova instanca sistemske operacije GetAllEmployeesSO
+     */
     protected GetAllEmployeesSO createGetAllEmployeesSO(){
         return new GetAllEmployeesSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetEmployeesByConditionSO.
+     *
+     * @return nova instanca sistemske operacije GetEmployeesByConditionSO
+     */
     protected GetEmployeesByConditionSO createGetEmployeesByConditionSO(){
         return new GetEmployeesByConditionSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije EditEmployeeSO.
+     *
+     * @return nova instanca sistemske operacije EditEmployeeSO
+     */
     protected EditEmployeeSO createEditEmployeeSO(){
         return new EditEmployeeSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije DeleteEmployeeSO.
+     *
+     * @return nova instanca sistemske operacije DeleteEmployeeSO
+     */
     protected DeleteEmployeeSO createDeleteEmployeeSO(){
         return new DeleteEmployeeSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije AddServiceBookSO.
+     *
+     * @return nova instanca sistemske operacije AddServiceBookSO
+     */
     protected AddServiceBookSO createAddServiceBookSO(){
         return new AddServiceBookSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetAllServiceBooksSO.
+     *
+     * @return nova instanca sistemske operacije GetAllServiceBooksSO
+     */
     protected GetAllServiceBooksSO createGetAllServiceBooksSO(){
         return new GetAllServiceBooksSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetServiceBooksByConditionSO.
+     *
+     * @return nova instanca sistemske operacije GetServiceBooksByConditionSO
+     */
     protected GetServiceBooksByConditionSO createGetServiceBooksByConditionSO(){
         return new GetServiceBooksByConditionSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije DeleteServiceBookSO.
+     *
+     * @return nova instanca sistemske operacije DeleteServiceBookSO
+     */
     protected DeleteServiceBookSO createDeleteServiceBookSO(){
         return new DeleteServiceBookSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije EditServiceBookSO.
+     *
+     * @return nova instanca sistemske operacije EditServiceBookSO
+     */
     protected EditServiceBookSO createEditServiceBookSO(){
         return new EditServiceBookSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetRepairsByFKConditionSO.
+     *
+     * @return nova instanca sistemske operacije GetRepairsByFKConditionSO
+     */
     protected GetRepairsByFKConditionSO createGetRepairsByFKConditionSO(){
         return new GetRepairsByFKConditionSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije GetRepairItemsByFKConditionSO.
+     *
+     * @return nova instanca sistemske operacije GetRepairItemsByFKConditionSO
+     */
     protected GetRepairItemsByFKConditionSO createGetRepairItemsByFKConditionSO(){
         return new GetRepairItemsByFKConditionSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije AddRepairSO.
+     *
+     * @return nova instanca sistemske operacije AddRepairSO
+     */
     protected AddRepairSO createAddRepairSO(){
         return new AddRepairSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije DeleteRepairSO.
+     *
+     * @return nova instanca sistemske operacije DeleteRepairSO
+     */
     protected DeleteRepairSO createDeleteRepairSO(){
         return new DeleteRepairSO();
     }
+
+    /**
+     * Vraca novu instancu sistemske operacije EditRepairSO.
+     *
+     * @return nova instanca sistemske operacije EditRepairSO
+     */
     protected EditRepairSO createEditRepairSO(){
         return new EditRepairSO();
     }
